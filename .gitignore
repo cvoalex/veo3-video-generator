@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+veo3_env/
+ENV/
+env/
+.venv
+
+# Environment variables
+.env
+.env.*
+
+# Google Cloud credentials
+credentials.json
+*.json
+!package.json
+!tsconfig.json
+
+# Generated videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+outputs/
+temp/
+uploads/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution
+build/
+dist/
+*.egg-info/

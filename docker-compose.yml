@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  veo3-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_CLOUD_PROJECT_ID=${GOOGLE_CLOUD_PROJECT_ID}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+      - VEO_LOCATION=${VEO_LOCATION}
+      - EXTERNAL_API_URL=${EXTERNAL_API_URL}
+      - EXTERNAL_API_KEY=${EXTERNAL_API_KEY}
+      - DEBUG=${DEBUG}
+      - MAX_FILE_SIZE=${MAX_FILE_SIZE}
+    volumes:
+      - ./credentials.json:/app/credentials.json:ro
+      - ./videos:/app/videos  # For local video storage during processing
+    restart: unless-stopped
+    
+  # Optional: Redis for job queue in production
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    restart: unless-stopped

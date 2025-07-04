@@ -1,0 +1,13 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+requests==2.31.0
+google-cloud-aiplatform==1.38.1
+google-auth==2.23.4
+python-dotenv==1.0.0
+pydantic==2.5.0
+aiofiles==23.2.0
+httpx==0.25.2
+opencv-python==4.8.1.78
+pillow==10.1.0
+ffmpeg-python==0.2.0
